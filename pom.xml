@@ -13,10 +13,7 @@
           <release>17</release>
         </configuration>
       </plugin>
-      <plugin>
-        <artifactId>maven-war-plugin</artifactId>
-        <version>3.2.3</version>
-      </plugin>
+      
       <plugin>
             <groupId>org.apache.maven.plugins</groupId>
             <artifactId>maven-war-plugin</artifactId>
@@ -27,4 +24,13 @@
         </plugin>
     </plugins>
   </build>
+  <dependencies>
+    <!-- Tomcat Embedded -->
+    <dependency>
+        <groupId>org.apache.tomcat.embed</groupId>
+        <artifactId>tomcat-embed-core</artifactId>
+        <version>9.0.73</version>
+    </dependency>
+</dependencies>
+
 </project>
