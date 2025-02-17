@@ -22,15 +22,33 @@
                 <failOnMissingWebXml>false</failOnMissingWebXml>
             </configuration>
         </plugin>
+        <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-jar-plugin</artifactId>
+            <version>3.3.0</version>
+            <configuration>
+                <archive>
+                    <manifest>
+                        <mainClass>Main</mainClass>
+                    </manifest>
+                </archive>
+            </configuration>
+        </plugin>
     </plugins>
   </build>
   <dependencies>
     <!-- Tomcat Embedded -->
     <dependency>
-        <groupId>org.apache.tomcat.embed</groupId>
-        <artifactId>tomcat-embed-core</artifactId>
-        <version>9.0.73</version>
+<groupId>org.apache.tomcat.embed</groupId>
+    <artifactId>tomcat-embed-core</artifactId>
+    <version>10.1.7</version> 
     </dependency>
+    <dependency>
+    <groupId>com.heroku</groupId>
+    <artifactId>webapp-runner</artifactId>
+    <version>9.0.71.0</version> <!-- Use the latest version -->
+    <scope>provided</scope>
+</dependency>
 </dependencies>
 
 </project>
