@@ -1,1 +1,1 @@
-web: java $JAVA_OPTS -Djava.security.egd=file:/dev/./urandom -cp target/SRMSS-0.0.1-SNAPSHOT.war org.apache.catalina.startup.Bootstrap start
+web: java $JAVA_OPTS -jar target/dependency/webapp-runner.jar --port $PORT target/SRMSS-0.0.1-SNAPSHOT.war
