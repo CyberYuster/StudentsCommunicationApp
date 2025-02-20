@@ -43,12 +43,12 @@
     <artifactId>tomcat-embed-core</artifactId>
     <version>10.1.7</version> 
     </dependency>
-    <dependency>
+   <!-- <dependency>
     <groupId>com.heroku</groupId>
     <artifactId>webapp-runner</artifactId>
-    <version>9.0.71.0</version> <!-- Use the latest version -->
+    <version>9.0.71.0</version>  Use the latest version 
     <scope>provided</scope>
-</dependency>
+</dependency>-->
 </dependencies>
 
 </project>
