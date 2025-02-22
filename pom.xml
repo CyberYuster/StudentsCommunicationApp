@@ -22,33 +22,44 @@
                 <failOnMissingWebXml>false</failOnMissingWebXml>
             </configuration>
         </plugin>
-        <plugin>
-            <groupId>org.apache.maven.plugins</groupId>
-            <artifactId>maven-jar-plugin</artifactId>
-            <version>3.3.0</version>
-            <configuration>
-                <archive>
-                    <manifest>
-                        <mainClass>Main</mainClass>
-                    </manifest>
-                </archive>
-            </configuration>
-        </plugin>
+      <!-- Exec Plugin for Running Embedded Tomcat -->
+      <plugin>
+        <groupId>org.codehaus.mojo</groupId>
+        <artifactId>exec-maven-plugin</artifactId>
+        <version>3.1.0</version>
+        <configuration>
+          <mainClass>com.venance.Main</mainClass> <!-- Replace with your main class -->
+        </configuration>
+      </plugin>
     </plugins>
   </build>
   <dependencies>
+   <!-- Jakarta Servlet API -->
+    <dependency>
+        <groupId>jakarta.servlet</groupId>
+        <artifactId>jakarta.servlet-api</artifactId>
+        <version>5.0.0</version>  <!-- Change version as needed -->
+        <scope>provided</scope>
+    </dependency>
+
+    <!-- Jakarta JSTL -->
+    <dependency>
+        <groupId>org.glassfish.web</groupId>
+        <artifactId>jakarta.servlet.jsp.jstl</artifactId>
+        <version>2.0.0</version>  <!-- Use a compatible version -->
+    </dependency>
     <!-- Tomcat Embedded -->
     <dependency>
 <groupId>org.apache.tomcat.embed</groupId>
     <artifactId>tomcat-embed-core</artifactId>
     <version>10.1.7</version> 
     </dependency>
-   <!-- <dependency>
-    <groupId>com.heroku</groupId>
-    <artifactId>webapp-runner</artifactId>
-    <version>9.0.71.0</version>  Use the latest version 
-    <scope>provided</scope>
-</dependency>-->
+    <dependency>
+      <groupId>org.apache.tomcat.embed</groupId>
+      <artifactId>tomcat-embed-jasper</artifactId>
+      <version>10.1.7</version>
+    </dependency>
+ 
 </dependencies>
 
 </project>
