@@ -1,1 +1,1 @@
-web: java $JAVA_OPTS -cp target/classes:target/dependency/*:target/SRMSS-0.0.1-SNAPSHOT.war com.venance.Main
+web: java $JAVA_OPTS -cp target/extracted/WEB-INF/classes:target/extracted/WEB-INF/lib/* com.venance.Main
